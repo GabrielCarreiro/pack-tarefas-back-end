@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
         return res.json(results.rows)
     } catch (err) {
         console.error(err.message);
-        res.status(500).json('Erro no servidor');
+        res.status(500).json(err.message);
     }
 });
 
